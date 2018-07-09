@@ -64,7 +64,7 @@ class ViewController: UIViewController, UITableViewDataSource {
        
         cell.nameLabel.text = "Name: " + results[indexPath.row].name
         
-        let homeURL = results[indexPath.row].homeworld// else { return }
+        let homeURL = results[indexPath.row].homeworld
         URLSession.shared.dataTask(with: homeURL) { (data, response, error) in
             guard let data = data else { return }
             do {
